@@ -3,41 +3,112 @@
 
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="csss/style.css">
+
 	<title>My Web Site</title>
+  
 </head>
 
-<body style="background: #BDB76B">
+<body class="containera">
+ 
+   <ul class="nav justify-content-center nav-tabs bg-dark">
+    <li class="nav-item">
+      <a class="nav-link active" href="index.htm"><i class="fas fa-home"></i> Homepage</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="books.htm"><i class="fas fa-book"></i> Books</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="films.htm"><i class="fas fa-film"></i> Films</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="musics.htm"><i class="fas fa-music"></i> Musics</a>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="usefullinks.htm"><i class="fas fa-align-justify"></i> Useful Links</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contactme.htm"><i class="fas fa-envelope"></i> Conctact Me</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="registration.htm"><i class="fas fa-registered"></i> Register</a>
+    </li>
+  </ul>
+  <br>
 
-	<div align="center"><h3>
-	  <a href="index.htm" style="color:blue;font-size:140%;">HOMEPAGE</a> |
-      <a href="films.htm">FILMS</a> |
-      <a href="books.htm">BOOKS</a> |
-      <a href="musics.htm">MUSICS</a> |
-      <a href="usefullinks.htm">USEFULLINKS</a> |
-      <a href="contactme.htm">CONTACT ME</a> |
-      <a href="registration.htm">REGISTER</a>
-  </h3></div>
-<hr>
-	<!--<div align="center"><h4><span style="color:blue;font-size:140%;"><a href="index.htm">HOMEPAGE</a></span> |<a href="films.htm">FILMS</a>|<a href="books.htm">BOOKS</a>|<a href="musics.htm">MUSICS</a>|<a href="usefullinks.htm">USEFULLINKS</a>|<a href="contactme.htm">CONTACT ME</a>|<a href="registration.htm">REGISTER</a></h4></div>-->
-	
-<div align="center"><img src="http://madhartproductions.com/wp-content/uploads/2017/10/Welcome-to-my-site-dark-1080x675.jpg" alt="Reading Book" width="500"	height="300"></div>	<br>
-<hr>
-<div align="center"><h3 style="font-size:140%; ">About Me</h3></div>
-<div align="center"><p style="color:#4B0082"><b>Hi! I'm Batuhan Sert.</b><br>I was born in 03/01/1997.<br>Right now, I'm studying at Eskisehir Technical University and it's my secondy year in this university.<br>My department is Computer Engineering.<br>I've have several hobbies.These are watching F1, football, playing computer games...</p></div>
-<hr>
- <div align="center"><form action="test.php">
- 	Username:
- 		<input type="text" name="Username">
- 		<br><br>
 
- 	Password:
- 		<input type="password" name="userpassword"> <br><br>
+  <div class="container-fluid">
+  <div class="row no-gutter align-items-center">
+    <div class="d-md-flex col-12 col-md-4 col-lg-6"><div class="transbox"><p><b style="color:#ff7f50">Hi! I'm Batuhan Sert.</b><br>I was born in 03/01/1997.<br>Right now, I'm studying at Eskisehir Technical University and it's my secondy year in this university.<br>My department is Computer Engineering.<br>I've have several hobbies.These are watching F1, football, playing computer games... <br><br><i>If you want to contact me, please click <a href="contactme.htm">'Contact me'</a> page</i></p></div></div>
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4"><b>Welcome!</b></h3>
+              <form>
+                <div class="form-label-group">
+                  <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+                  <label for="inputEmail">Username</label>
+                </div>
 
- 		<input type="submit" value="Sign In">
- 	</form></div>
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <label for="inputPassword">Password</label>
+                </div>
+
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1" style="color: #ff7f50">Remember password</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                <div class="text-center">
+                  <a class="small" href="#">Forgot password?</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="container">
+  <div class="row align-items-center justify-content-center">
+        <div class="col-12 col-md-6"><p><b>Hi! I'm Batuhan Sert.</b><br>I was born in 03/01/1997.<br>Right now, I'm studying at Eskisehir Technical University and it's my secondy year in this university.<br>My department is Computer Engineering.<br>I've have several hobbies.These are watching F1, football, playing computer games...</p></div>
+      
+  
+    <div class="col-12 col-md-6">
+  <form>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Username</span>
+      </div>
+      <input type="text" name="Username" class="form-control">
+     
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Password</span>
+      </div>
+      <input type="password" name="Password" class="form-control">
+     
+    </div>
+  </form>
+  <button type="button" class="btn btn-info">Sign In</button>
+</div>
+  </div>
+</div> 
 <hr>
-<div align="center"><p>If you want to contact me, please click <a href="contactme.htm">'Contact me'</a> page</p></div>
+<div align="center"></div>
 <hr>
+<p>If you want to contact me, please click <a href="contactme.htm">'Contact me'</a> page</p>
+-->
 </body>
 
 </html>
