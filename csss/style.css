@@ -100,26 +100,29 @@ ul {
   top: 0;
   width: 100%;
 }
- a{color: #ff7f50}
     li{color: #ff0066}
     ul{color: #ff0066}
     .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
       background-color: grey;
       color: #ff7f50;
-      text-decoration: underline;
-      font-weight: 700;
+      font-weight: 600;
 
+    }
+    navbar-nav{
+      color: #ff7f50 !important;
     }
     a:hover{
       color: #ff7f50
     }
 
     div.transbox {
-  margin: 30px;
-  background-color: #ffffff;
+  margin:30px 50px;
+  background-color: #c4ff77;
   border: 1px solid black;
+  display: table;
   opacity: 0.6;
   filter: alpha(opacity=60); /* For IE8 and earlier */
+  border-radius: 2rem;
 }
 
 div.transbox p {
@@ -155,4 +158,23 @@ div.transbox p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+h3{
+  color: #ff0066;
+}
+.pempe-renk{
+  color: #ff0066;
+}
+.arenk{
+  color: #ff7f50 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color : red;
+}
+.nav-link.active {
+  color: #37c6a7 !important;
+}
+.nav-link.hover{
+  color: #37c6a7 !important;
 }

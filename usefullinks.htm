@@ -8,12 +8,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="csss/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <style>
+      td{
+  color: #d4db06
+}
+th{
+  color: #43c900
+}
+
+    </style>
 
 	</head>
 	<body>
-	
-   <ul class="nav justify-content-center nav-tabs bg-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav nav-tabs bg-dark justify-content-center">
     <li class="nav-item">
       <a class="nav-link" href="index.htm"><i class="fas fa-home"></i> Homepage</a>
     </li>
@@ -36,61 +52,224 @@
       <a class="nav-link" href="registration.htm"><i class="fas fa-registered"></i> Register</a>
     </li>
   </ul>
+  </div>  
+</nav>
 
-<hr>
-<h2 style="color: #ff0066;">Hospitals</h2>
-<ul>
-  <li><a href="https://yunusemredh.saglik.gov.tr/">Yunus Emre Hospital</a></li>
-  <li><a href="https://eskisehirsehir.saglik.gov.tr/">Eskisehir Sehir Hospital</a></li>
-  <li><a href="https://www.acibadem.com.tr/danisma/hastaneler/eskisehir-hastanesi">Acıbadem Hospital</a></li>
-  <li><a href="https://eskisehiradsh.saglik.gov.tr/">Eskişehir Ağız ve Diş Hastanesi</a></li>
-  <li><a href="https://www.ozelanadoluhastanesi.com/">Anadolu Hospital</a></li>
-  <li><a href="http://www.elifana.com/">Elifana</a></li>
-  <li><a href="https://www.eskisehirgozmerkezi.com.tr/">Özel Eskişehir Göz Merkezi</a></li>
-  <li><a href="https://www.hastane.com.tr/hastane/eskisehir-ozel-sakarya-hastanesi.html">Sakarya Hospital</a></li>
-  <li><a href="http://www.foraftr.com/">Fora FTR</a></li>
-  <li><a href="https://www.ocd.com.tr/">Oldcitydent Ağız Ve Diş Sağlığı Hastanesi</a></li>
-  <li><a href="https://umithastanesi.com.tr/find-doctor">Ümit Hospital</a></li>
-</ul>  
-<hr>
-	
+  <br><br>
 
-<h2 style="color: #ff0066;">Pharmacies</h2>
-<ul>
-	<li><a href="http://www.eskisehireo.org.tr/sayfa/26463/nobetci_eczaneler"> Pharmacies on duty</a></li>
-</ul>
-<hr>
+  <div class="container-fluid">
+  <div class="row no-gutter align-items-start">
+    <div class="col-12 col-md-6 col-lg-3" > 
+      <div class="p-3 mb-2 bg-secondary text-white">
+<table id="tablePreview" class="table table-striped table-responsive-md btn-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Hospitals</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td class="mor-renk">Yunus Emre Hospital</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://yunusemredh.saglik.gov.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Eskisehir Sehir Hospital</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://eskisehirsehir.saglik.gov.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Acıbadem Hospital</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.acibadem.com.tr/danisma/hastaneler/eskisehir-hastanesi">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Eskişehir Ağız ve Diş Hastanesi</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://eskisehiradsh.saglik.gov.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Anadolu Hospital</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.ozelanadoluhastanesi.com/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Elifana</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://www.elifana.com/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>Özel Eskişehir Göz Merkezi</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.eskisehirgozmerkezi.com.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>Sakarya Hospital</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.hastane.com.tr/hastane/eskisehir-ozel-sakarya-hastanesi.html">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>Fora FTR</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://www.foraftr.com/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>Oldcitydent Ağız Ve Diş Sağlığı Hastanesi</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.ocd.com.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td>Ümit Hospital</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://umithastanesi.com.tr/find-doctor">Link</a></button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
 
-<h2 style="color: #ff0066;">Education</h2>
-<ul><li><a href="https://www.yok.gov.tr/">YOK</a></li>
-<li><a href="http://osym.gov.tr/">OSYM</a></li>
-<li><a href="https://www.eskisehir.edu.tr/">ESTU</a></li>
-<li><a href="https://www.anadolu.edu.tr/">Anadolu University</a></li>
-<li><a href="http://ceng.eskisehir.edu.tr/">CENG</a></li>
-<li><a href="http://eem.eskisehir.edu.tr/">EEM</a></li>
-<li><a href="http://endustri.eskisehir.edu.tr/">EM</a></li>
-<li><a href="http://cevre.eskisehir.edu.tr/">ÇM</a></li>
-<li><a href="http://kimya.eskisehir.edu.tr/Default.aspx">KM</a></li>
-<li><a href="http://insaat.eskisehir.edu.tr/">IM</a></li>
-<li><a href="http://matse.eskisehir.edu.tr/">MATSE</a></li>
-<li><a href="http://makine.eskisehir.edu.tr/">MM</a></li>
-</ul>
-<hr>
-<h2 style="color: #ff0066;">Others</h2>
-<ul>
-	<li><a href="https://www.tubitak.gov.tr/">TUBITAK</a></li>
-	<li><a href="https://www.turkiye.gov.tr/">E-DEVLET</a></li>
-	<li><a href="https://www.mgm.gov.tr/tahmin/il-ve-ilceler.aspx?il=Eski%C5%9Fehir&ilce=Tepeba%C5%9F%C4%B1">MGM(Eskişehir)</a></li>
-	<li><a href="http://www.eskisehir.bel.tr/otobus_saatleri.php?menu_id=57">Bus</a></li>
-	<li><a href="http://www.eskisehir.bel.tr/ebb.php">Eskişehir</a></li>
-</ul>
-<hr>
 
-	
+    <div class="col-12 col-md-6 col-lg-3" > 
+      <div class="p-3 mb-2 bg-secondary text-white">
+      <table id="tablePreview" class="table table-striped table-responsive-md btn-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Pharmacies</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td class="mor-renk">Pharmacies on duty</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://www.eskisehireo.org.tr/sayfa/26463/nobetci_eczaneler">Link</a></button></td>
+    </tr>
+  </tbody>
+</table>
+    </div></div>
 
 
+     <div class="col-12 col-md-6 col-lg-3" > 
+      <div class="p-3 mb-2 bg-secondary text-white">
+<table id="tablePreview" class="table table-striped table-responsive-md btn-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Education</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td class="mor-renk">YOK</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.yok.gov.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>OSYM</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://osym.gov.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>ESTU</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Anadolu University</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.anadolu.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>CENG</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://ceng.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>EEM</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://eem.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>EM</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://endustri.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>ÇM</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://cevre.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>KM</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://kimya.eskisehir.edu.tr/Default.aspx">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>İM</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://insaat.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td>MATSE</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://matse.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td>MM</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://makine.eskisehir.edu.tr/">Link</a></button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
 
-
+    <div class="col-12 col-md-6 col-lg-3" > 
+      <div class="p-3 mb-2 bg-secondary text-white">
+      <table id="tablePreview" class="table table-striped table-responsive-md btn-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>OTHERS</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td class="mor-renk">Tubitak</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.tubitak.gov.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td class="mor-renk">E-DEVLET</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.turkiye.gov.tr/">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td class="mor-renk">MGM(Eskişehir)</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="https://www.mgm.gov.tr/tahmin/il-ve-ilceler.aspx?il=Eski%C5%9Fehir&ilce=Tepeba%C5%9F%C4%B1">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td class="mor-renk">Bus</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://www.eskisehir.bel.tr/otobus_saatleri.php?menu_id=57">Link</a></button></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td class="mor-renk">Eskişehir</td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"><a href="http://www.eskisehir.bel.tr/ebb.php">Link</a></button></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+   </div>
+  </div>
+</div>
 
 	</body>
 </html>

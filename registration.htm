@@ -9,27 +9,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="csss/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 
 
 	<title>Registration</title>
-
   <style>
-    body{ background-color: #BDB76B }
-    a{color: #ff0066}
-    li{color: #ff0066}
-    ul{color: #ff0066}
-    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-      background-color: black;
-      color: #ff0066;
+    td, p{
+      color: #ff7f50;
     }
-    a:hover{
-      color:  #c6004f
-    }
+    .btn-block {
+    display: block;
+    width: 100px;
+}
   </style>
 </head>
 <body>
-  
-   <ul class="nav justify-content-center nav-tabs bg-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav nav-tabs bg-dark justify-content-center">
     <li class="nav-item">
       <a class="nav-link" href="index.htm"><i class="fas fa-home"></i> Homepage</a>
     </li>
@@ -52,97 +55,111 @@
       <a class="nav-link active" href="registration.htm"><i class="fas fa-registered"></i> Register</a>
     </li>
   </ul>
+  </div>  
+</nav>
+
   <br>
 
   <hr>
+<div class="container">
+    <div class="row  align-items-center  justify-content-center">
+      <div class="col-xs-12 col-md-6">
 
-  <form action="/action_page.php" autocomplete="on" method="POST">
-  	<fieldset>
-  		<table>
-  		<tr>
-  		<td>Name,Surname:</td>
-  		<td> <input type="text" name="name_surname" ></td>
-  	</tr>
+        <form action="/action_page.php" autocomplete="on" method="POST">
+    
+      <table>
+      <tr>
+      <td><b>Name,Surname:</b></td>
+      <td> <input type="text" class="form-control" name="name_surname" placeholder="Name Surname" ></td>
+    </tr>
 
-  	<tr>
-  		<td>Password:</td>
-  		<td><input type="Password" name="password"></td>
-  	</tr>
+    <tr>
+      <td><b>Password:</b></td>
+      <td><input type="Password" class="form-control" name="password" placeholder="Password"></td>
+    </tr>
 
-  	<tr>
-  		<td>E-mail:</td>
-  		<td> <input type="email" name="email"></td>
-  	</tr>
+    <tr>
+      <td><b>E-mail:</b></td>
+      <td> <input type="email" class="form-control" placeholder="example@example.com" name="email"></td>
+    </tr>
 
-  	<tr>
-  		<td>Date of Birth:</td>
-  		<td><input type="date" name="birthday"></td>
-  	</tr>
-  	<tr>
-  		<td>Gender:</td>
-  		<td><select name="Gender">
-  	<option value="saab">Female</option>
+    <tr>
+      <td><b>Date of Birth:</b></td>
+      <td><input type="date" class="form-control" name="birthday"></td>
+    </tr>
+    <tr>
+      <td><b>Gender:</b></td>
+      <td><select name="Gender" class="custom-select">
+    <option value="female">Female</option>
     <option value="Male">Male</option>
   </select></td>
-  	</tr>
+    </tr>
 
-  	<tr>
-  		<td>About Me:</td>
-  		<td><textarea name="About_Me" cols="30" rows="10"></textarea></td>
-  	</tr>
-  	<tr>
-  		<td>Upload Your Photo</td>
-  		<td><input type="file" name="myfile"></td>
-  	</tr>
-  	<tr>
-  		<td>Mark your interests:</td>
-  		<td><input type="checkbox" name="c1">Autos and Vehicles</td>
-  		<td><input type="checkbox" name="c2">Comedy</td>
-  		<td><input type="checkbox" name="c3">Education and Exams</td>
-  	</tr>
-
-  	<tr>
-  		<td></td>
-  		<td><input type="checkbox" name="c4">Film and Animation</td>
-  		<td><input type="checkbox" name="c5">Gaming</td>
-  		<td><input type="checkbox" name="c6">Musics</td>
-  	</tr>
-
-  	<tr>
-  		<td></td>
-  		<td><input type="checkbox" name="c7">Politics</td>
-  		<td><input type="checkbox" name="c8">Pets and Animals</td>
-  		<td><input type="checkbox" name="c9">Science and Technology</td>
-  	</tr>
-  	<tr>
-  		<td></td>
-  		<td><input type="checkbox" name="c10">Sports</td>
-      <td><input type="checkbox" name="c11">Coins</td>
-      <td><input type="checkbox" name="c12">Hardware</td>
-  	</tr>
     <tr>
-      <td></td>
-      <td><input type="checkbox" name="c13">Software</td>
-      <td><input type="checkbox" name="c14">Mobile Devices</td>
-      <td><input type="checkbox" name="c15">Off-Topic</td>
+      <td><b>About Me:</b></td>
+      <td><textarea name="About_Me" class="form-control" cols="30" rows="10"></textarea></td>
     </tr>
-     <tr>
-      <td></td>
-      <td><input type="checkbox" name="c16">Travel</td>
-      <td><input type="checkbox" name="c17">Healthy Life</td>
-      <td><input type="checkbox" name="c18">Culture </td>
-    </tr>
-      <tr>
-      <td></td>
-      <td><input type="checkbox" name="c19">Books/Comics</td>
-      <td><input type="checkbox" name="c20">Formula-1</td>
-    </tr>
-</table>
-<input type="submit" value="Submit" onclick="alert('Thanks for registration!')">
-<input type="reset">
-  	</fieldset>
+    <tr>
+      <td><b>Upload Your Photo:</b></td>
+      <td><div class="custom-file"><input type="file" class="custom-file-input" name="myfile">
+        <label class="custom-file-label" for="customFile">Choose file</label></div></td>
+    </tr></table>
 
-  </form>
+  </div>
+
+
+    <div class="col-xs-12 col-md-6">
+     <b><p> Mark your interests:</p></b> 
+      <table>
+    <tr>
+      <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck1" name="c1"><label class="custom-control-label" for="customCheck1">Autos and Vehicles</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck2" name="c2"><label class="custom-control-label" for="customCheck2">Comedy</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck3" name="c3"><label class="custom-control-label" for="customCheck3">Education and Exams</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck4" name="c4"><label class="custom-control-label" for="customCheck4">Film and Animation</label> </div></td>
+        
+      
+    </tr>
+    <tr>
+      <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck5" name="c5"><label class="custom-control-label" for="customCheck5">Gaming</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck6" name="c6"><label class="custom-control-label" for="customCheck6">Musics</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck7" name="c7"><label class="custom-control-label" for="customCheck7">Politics</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck8" name="c8"><label class="custom-control-label" for="customCheck8">Pets and Animals</label> </div></td>
+    </tr>
+
+    <tr>
+      <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck9" name="c9"><label class="custom-control-label" for="customCheck9">Science and Technology</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck10" name="c10"><label class="custom-control-label" for="customCheck10">Sports</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck11" name="c11"><label class="custom-control-label" for="customCheck11">Coins</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck12" name="c12"><label class="custom-control-label" for="customCheck12">Hardware</label> </div></td>
+        
+      
+    </tr>
+    <tr>
+      <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck13" name="c13"><label class="custom-control-label" for="customCheck13">Software</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck14" name="c14"><label class="custom-control-label" for="customCheck14">Mobile Devices</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck15" name="c15"><label class="custom-control-label" for="customCheck15">Off-Topic</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck16" name="c16"><label class="custom-control-label" for="customCheck16">Travel</label> </div></td>
+        
+      
+    </tr>
+    <tr>
+      <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck17" name="c17"><label class="custom-control-label" for="customCheck17">Healthy Life</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck18" name="c18"><label class="custom-control-label" for="customCheck18">Culture </label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck19" name="c19"><label class="custom-control-label" for="customCheck19">Books/Comics</label> </div></td>
+        <td><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="customCheck20" name="c20"><label class="custom-control-label" for="customCheck20">Formula-1</label> </div></td>
+    </tr>
+    </table>
+
+        </div>  <div align="right"> <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="alert('Thanks for registration!')">submit</button>
+<button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="reset">Reset</button></div>
+        
+
+        </form>
+    </div>
+  </div>
+
+
+  
 
 </body>
 </html>
