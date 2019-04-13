@@ -116,19 +116,23 @@ ul {
     }
 
     div.transbox {
-  margin:30px 50px;
+  border-style: solid;
+  border-width: 1px 1px 1px 20px;
+  border-color: #ff7f50;
+ margin:30px 50px;
   background-color: #c4ff77;
-  border: 1px solid black;
   display: table;
   opacity: 0.6;
   filter: alpha(opacity=60); /* For IE8 and earlier */
   border-radius: 2rem;
+  overflow: auto;
 }
 
 div.transbox p {
   margin: 5%;
   font-weight: bold;
   color: #000000;
+
 }
 
 .dairesel{
