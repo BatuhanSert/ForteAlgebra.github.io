@@ -122,7 +122,7 @@ ul {
  margin:30px 50px;
   background-color: #c4ff77;
   display: table;
-  opacity: 0.6;
+  opacity: 0.85;
   filter: alpha(opacity=60); /* For IE8 and earlier */
   border-radius: 2rem;
   overflow: auto;
@@ -131,7 +131,7 @@ ul {
 div.transbox p {
   margin: 5%;
   font-weight: bold;
-  color: #000000;
+  color: rgba(0, 0, 0, 1);
 
 }
 
@@ -181,4 +181,7 @@ h3{
 }
 .nav-link.hover{
   color: #37c6a7 !important;
+}
+.girinti{
+  text-indent: 20px;
 }
