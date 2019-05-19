@@ -38,6 +38,7 @@
     var brickOffsetLeftSiyah = 140;
     var score = 0;
     var color = "#0095DD";
+    var finished = false;
 
 
 
@@ -246,6 +247,7 @@
     }
 
     function draw() {
+        if (finished == true) return;
         cizim.clearRect(0, 0, tuval.width, tuval.height);
         drawBricks();
         collisionDetection();
@@ -265,6 +267,7 @@
                 dy = -dy;
             }
             else {
+                finished = true;
                 alert("GAME OVER");
                 document.location.reload();
             }
