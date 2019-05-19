@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Homework III</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+<canvas id="tuval" width="480" height="320"></canvas>
+
+<script>
+    var tuval = document.getElementById("tuval");
+    var cizim = tuval.getContext("2d");
+    var ballRadius = 10;
+    var x = tuval.width/2;
+    var y = tuval.height/2;
+    var dx = 2;
+    var dy = -2;
+    var paddleHeight = 10;
+    var paddleWidth = 75;
+    var paddleX = (tuval.width-paddleWidth)/2;
+    var rightPressed = false;
+    var leftPressed = false;
+    var brickRowCount = 3;
+    var brickColumnCount = 3;
+    var brickWidth = 100;
+    var brickHeight = 20;
+    var brickPadding = 10;
+    var brickOffsetTop = 30;
+    var brickOffsetLeft = 80;
+    var brickOffsetLeftSecondColumn = 140;
+    var brickWidthSiyah = 200;
+    var brickHeightSiyah = 10;
+    var brickPaddingSiyah= 30;
+    var brickOffsetLeftSiyah = 140;
+    var score = 0;
+    var color = "#0095DD";
+
+
+
+
+
+    var bricks = [];
+    for(c=0; c<brickColumnCount; c++) {
+        bricks[c] = [];
+        for(r=0; r<brickRowCount; r++) {
+            bricks[c][r] = { x: 0, y: 0, status: 1 };
+        }
+    }
+
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+
+    function keyDownHandler(e) {
+        if(e.keyCode == 39) {
+            rightPressed = true;
+        }
+        else if(e.keyCode == 37) {
+            leftPressed = true;
+        }
+    }
+    function keyUpHandler(e) {
+        if(e.keyCode == 39) {
+            rightPressed = false;
+        }
+        else if(e.keyCode == 37) {
+            leftPressed = false;
+        }
+    }
+    function collisionDetection() {
+        for(c=0; c<brickColumnCount; c++) {
+            for(r=0; r<brickRowCount; r++) {
+                var b = bricks[c][r];
+                if(b.status == 1) {
+                    if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                        //RED
+                        if (c == 0 && r == 0){
+                            dy = -dy;
+                            b.status = 0;
+                            score += 20;
+                            color = "#FF0000";
+
+
+                        }//BLUE
+                        else if (c == 0 && r ==1){
+                            dy = -dy;
+                            b.status = 0;
+                            score += 40;
+                            color = "#0000ff";
+
+                        }//GREEN
+                        else if (c == 0 && r ==2){
+                            dy = -dy;
+                            b.status = 0;
+                            score += 80;
+                            color = "#339933";
+
+                        }//PURPLE
+                        else if (c == 1 && r ==0){
+                            dy = -dy;
+                            b.status = 0;
+                            score += 60;
+                            color = "#990099";
+
+                        }//YELLOW
+                        else if (c == 1 && r ==1){
+                            dy = -dy;
+                            b.status = 0;
+                            score += 50;
+                            color = "#ffff00";
+
+                        }
+                        else {
+                            dy = -dy;
+                            b.status = 1;
+                        }
+
+                        if(score == 250) {
+                            alert("YOU WIN, CONGRATS!");
+                            document.location.reload();
+                        }
+                    }//BLACK
+                    else if(x > b.x && x < b.x+brickWidthSiyah && y > b.y && y < b.y+brickHeightSiyah){
+                        if (c == 2 && r ==0){
+                            dy = -dy;
+                            b.status = 1;
+                            score += 0;
+                        }else{
+                            dy = -dy;
+                            b.status = 1;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    function drawBall() {
+        cizim.beginPath();
+        cizim.arc(x, y, ballRadius, 0, Math.PI*2);
+        cizim.fillStyle = color;
+        cizim.fill();
+        cizim.closePath();
+
+
+    }
+    function drawPaddle() {
+        cizim.beginPath();
+        cizim.rect(paddleX, tuval.height-paddleHeight, paddleWidth, paddleHeight);
+        cizim.fillStyle = "#0095DD";
+        cizim.fill();
+        cizim.closePath();
+    }
+    function drawBricks() {
+        for(c=0; c<brickColumnCount; c++) {
+            for(r=0; r<brickRowCount; r++) {
+                if(bricks[c][r].status == 1) {
+                    //red
+                    if (c == 0 && r == 0){
+                        var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+                        var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        cizim.beginPath();
+                        cizim.rect(brickX, brickY, brickWidth, brickHeight);
+                        cizim.fillStyle = "#ff0000";
+                        cizim.fill();
+                        cizim.closePath();
+
+                    }
+                    //blue
+                    else if (c == 0 && r ==1) {
+                        var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+                        var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        cizim.beginPath();
+                        cizim.rect(brickX, brickY, brickWidth, brickHeight);
+                        cizim.fillStyle = "#0000ff";
+                        cizim.fill();
+                        cizim.closePath();
+
+                    }
+                    //green
+                    else if (c == 0 && r ==2){
+                        var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+                        var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        cizim.beginPath();
+                        cizim.rect(brickX, brickY, brickWidth, brickHeight);
+                        cizim.fillStyle = "#339933";
+                        cizim.fill();
+                        cizim.closePath();
+                    }
+                    //purple
+                    else if (c == 1 && r == 0 ){
+                        var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeftSecondColumn;
+                        var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        cizim.beginPath();
+                        cizim.rect(brickX, brickY, brickWidth, brickHeight);
+                        cizim.fillStyle = "#990099";
+                        cizim.fill();
+                        cizim.closePath();
+
+                    }//yellow
+                    else if (c == 1 && r == 1 ){
+                        var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeftSecondColumn;
+                        var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        cizim.beginPath();
+                        cizim.rect(brickX, brickY, brickWidth, brickHeight);
+                        cizim.fillStyle = "#ffff00";
+                        cizim.fill();
+                        cizim.closePath();
+                    }//black
+                    else if (c == 2 && r == 0) {
+                        var brickX = (r*(brickWidthSiyah+brickPaddingSiyah))+brickOffsetLeftSiyah;
+                        var brickY = (c*(brickHeightSiyah+brickPaddingSiyah))+brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        cizim.beginPath();
+                        cizim.rect(brickX, brickY, brickWidthSiyah, brickHeightSiyah);
+                        cizim.fillStyle = "#000000";
+                        cizim.fill();
+                        cizim.closePath();
+                    }
+                    else{}
+
+                }
+            }
+        }
+    }
+    function drawScore() {
+        cizim.font = "16px Arial";
+        cizim.fillStyle = "#0095DD";
+        cizim.fillText("Score: "+ score, tuval.width/3, 300);
+    }
+
+    function draw() {
+        cizim.clearRect(0, 0, tuval.width, tuval.height);
+        drawBricks();
+        collisionDetection();
+        drawBall();
+        drawPaddle();
+        drawScore();
+
+
+        if(x + dx > tuval.width-ballRadius || x + dx < ballRadius) {
+            dx = -1 * dx;
+        }
+        if(y + dy < ballRadius) {
+            dy = -dy;
+        }
+        else if(y + dy > tuval.height-ballRadius) {
+            if(x > paddleX && x < paddleX + paddleWidth) {
+                dy = -dy;
+            }
+            else {
+                alert("GAME OVER");
+                document.location.reload();
+            }
+        }
+
+
+        if(rightPressed && paddleX < tuval.width-paddleWidth) {
+            paddleX += 7;
+        }
+        else if(leftPressed && paddleX > 0) {
+            paddleX -= 7;
+        }
+
+        x += dx;
+        y += dy;
+    }
+
+    setInterval(draw, 15);
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
