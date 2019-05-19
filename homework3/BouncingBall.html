@@ -10,6 +10,8 @@
 </head>
 <body>
 <canvas id="tuval" width="480" height="320"></canvas>
+<h2 id="demo" style="text-align: center"></h2>
+
 
 <script>
     var tuval = document.getElementById("tuval");
@@ -81,7 +83,8 @@
                         if (c == 0 && r == 0){
                             dy = -dy;
                             b.status = 0;
-                            score += 20;
+                            //score += 20;
+                            document.getElementById("demo").innerHTML ="Score: " + (score += 20);
                             color = "#FF0000";
 
 
@@ -89,28 +92,32 @@
                         else if (c == 0 && r ==1){
                             dy = -dy;
                             b.status = 0;
-                            score += 40;
+                            //score += 40;
+                            document.getElementById("demo").innerHTML ="Score: " + (score += 40);
                             color = "#0000ff";
 
                         }//GREEN
                         else if (c == 0 && r ==2){
                             dy = -dy;
                             b.status = 0;
-                            score += 80;
+                            //score += 80;
+                            document.getElementById("demo").innerHTML = "Score: " + (score += 80);
                             color = "#339933";
 
                         }//PURPLE
                         else if (c == 1 && r ==0){
                             dy = -dy;
                             b.status = 0;
-                            score += 60;
+                            //score += 60;
+                            document.getElementById("demo").innerHTML = "Score: " + (score += 60);
                             color = "#990099";
 
                         }//YELLOW
                         else if (c == 1 && r ==1){
                             dy = -dy;
                             b.status = 0;
-                            score += 50;
+                           // score += 50;
+                            document.getElementById("demo").innerHTML = "Score: " + (score += 50);
                             color = "#ffff00";
 
                         }
@@ -240,11 +247,12 @@
             }
         }
     }
-    function drawScore() {
+    /*function drawScore() {
         cizim.font = "16px Arial";
         cizim.fillStyle = "#0095DD";
         cizim.fillText("Score: "+ score, tuval.width/3, 300);
-    }
+
+    }*/
 
     function draw() {
         if (finished == true) {return;}
@@ -253,7 +261,8 @@
         collisionDetection();
         drawBall();
         drawPaddle();
-        drawScore();
+        //drawScore();
+        document.getElementById("demo").innerHTML ="Score: " + score;
 
 
         if(x + dx > tuval.width-ballRadius || x + dx < ballRadius) {
@@ -286,6 +295,7 @@
     }
 
     setInterval(draw, 15);
+
 </script>
 
 
