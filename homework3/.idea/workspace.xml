@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="839536a4-a05b-44a3-92c3-c68d469a71a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Css_ekleme/index1.htm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../contactme.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../contactme.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../csss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../csss/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BouncingBall.html" beforeDir="false" afterPath="$PROJECT_DIR$/BouncingBall.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/BouncingBall.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="280" column="25" lean-forward="true" selection-start-line="280" selection-start-column="25" selection-end-line="280" selection-end-column="25" />
+              <caret line="250" column="57" lean-forward="true" selection-start-line="250" selection-start-column="57" selection-end-line="250" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -48,10 +46,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -94,14 +92,15 @@
       <updated>1558294469679</updated>
       <workItem from="1558294471186" duration="64000" />
       <workItem from="1558294990995" duration="512000" />
+      <workItem from="1558295715501" duration="28000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="576000" />
+    <option name="totallyTimeSpent" value="604000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5080645" />
@@ -130,7 +129,7 @@
     <entry file="file://$PROJECT_DIR$/BouncingBall.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="280" column="25" lean-forward="true" selection-start-line="280" selection-start-column="25" selection-end-line="280" selection-end-column="25" />
+          <caret line="250" column="57" lean-forward="true" selection-start-line="250" selection-start-column="57" selection-end-line="250" selection-end-column="57" />
         </state>
       </provider>
     </entry>
