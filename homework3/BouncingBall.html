@@ -247,12 +247,12 @@
             }
         }
     }
-    /*function drawScore() {
+    function drawScore() {
         cizim.font = "16px Arial";
         cizim.fillStyle = "#0095DD";
         cizim.fillText("Score: "+ score, tuval.width/3, 300);
 
-    }*/
+    }
 
     function draw() {
         if (finished == true) {return;}
@@ -261,7 +261,7 @@
         collisionDetection();
         drawBall();
         drawPaddle();
-        //drawScore();
+        drawScore();
         document.getElementById("demo").innerHTML ="Score: " + score;
 
 

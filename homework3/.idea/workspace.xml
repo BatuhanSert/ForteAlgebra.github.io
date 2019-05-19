@@ -23,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/BouncingBall.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
-              <caret line="77" column="44" lean-forward="true" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+              <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -105,11 +105,13 @@
       <workItem from="1558295841980" duration="15000" />
       <workItem from="1558295882372" duration="65000" />
       <workItem from="1558296578854" duration="1123000" />
+      <workItem from="1558297807982" duration="51000" />
+      <workItem from="1558297972876" duration="99000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1807000" />
+    <option name="totallyTimeSpent" value="1957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -141,7 +143,7 @@
     <entry file="file://$PROJECT_DIR$/BouncingBall.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
-          <caret line="77" column="44" lean-forward="true" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+          <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
